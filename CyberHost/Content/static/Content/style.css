@@ -1,0 +1,89 @@
+<style>
+
+    * {
+    box-sizing: border-box;
+    }
+
+    .column {
+        float: left;
+        width: 45%;
+        background-color: #ebebeb;
+        border: 2px solid black;
+        margin: 10px;
+        padding: 10px;
+        overflow: auto;
+        height: 500px;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .rounded {
+        border-radius: 20px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    /* the ul elements have these properties*/
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: red;
+    }
+
+    /* all li elements have these properties*/
+    li {
+        float: left;
+    }
+
+    /* the line item, a tag has these properties */
+    li a {
+      display: block;
+      color: white;
+      background: grey;
+      text-align: center;
+      padding: 14px 30px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    /* li elements, the a element, hover action does this actions ... */
+    li a:hover {
+      text-decoration: underline;
+    }
+
+    body {
+    padding-top: 60px;
+    width:90%;
+    margin: auto;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left:0;
+        text-transform: uppercase;
+        width: 100%
+    }
+
+@media only screen and (max-width: 950px) {
+    .column {
+        width: 100%
+    }
+}
+
+
+
+</style>

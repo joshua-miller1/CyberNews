@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'Content/style.css' %}"}>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber News Home Page</title>
+</head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="/Home/Home">Home</a></li>
+                <li><a href="/Content/cybernews">Cyber Landscape News</a></li>
+                <li><a href="">CS Major Courses</a></li>
+                <li><a href="">CY Major Courses</a></li>
+            </ul>
+        </nav>
+
+        <h1>HTML and CSS Notes</h1>
+        <h2>Welome to my Django Project!</h2>
+            <p>
+                I have developed this local site by compiling things I have learned from youtube videos, stackoverflow, geeksforgeeks, and honestly a lot of trial and error.
+            </p>
+
+            <p>
+                Front End Development <br>
+                HTML - Hypertext Markup Language - gives structure of the webpages <br>
+                CSS - Cascading Style Sheet - used to make it look pretty <br>
+                JavaScript - used for adding functionality to webpages - programming language <br>
+
+                Frontend Framworks - a libary of code that can be helpful to use to make websites,
+                Examples include: react *the most popular*, angular, vue
+
+                Version control systems - mainly Git
+
+                DOM - document object model - a model that creates the html document
+                render - means display
+            </p>
+
+        <h2>HTML Notes</h2>
+            <p>
+                html lang attribute is best practice html lang = en
+                the image alt attribute is best practice for web services
+
+                meta elements:
+                charset is mapping of characters to a numbers - utf-8 is most characters
+                viewport - the visable area of a website , width and zoom-factor (aka intiial sacle =1.0
+                look good on all devices!
+                other Meta - keywords, description (what shows up on a search engine for the website)
+                - gives information about the webpage
+            </p>
+            <p>
+                <br>
+                <br>html:
+                <br>head tags are information about the page, such as title
+                <br>body tag is for the content of the page
+                <br>img - doesnt need a closing tag, src tag is the path to image, alt is alternative text if the image cant be shown
+                <br>p tag, short for paragraph, usually some text
+                <br> em - emphasis elements - stresses the content - default is itailics
+                <br> strong - similar to em element
+                <br> heading elements - h1-6 1 is biggest size, h6 is smalleset; dont use for size, use as a hierarchy of elements
+                only one h1 element, next heading should be h2... and so on
+                <br> special characters - &content: the content is the special character you want to include!
+                just google html entitys and it will give you the text for the special characters
+                great example is &nbsp - non breaking space used to add words that dont break the line
+            </p>
+            <p>
+                <br> a tag is anchor element - should have href - hypertext reference
+                download attribute prompts users to download!
+                <br> can add unique identifier to elemnts with attiribute id="text" -- a fragment or place on the page
+                use a #id to jump to the section with the attribute id
+                a # without any text will take you to the top
+                target attribute="_blank" makes a new tab when clicking the a tag link
+                mailto -> prepopulate your text in the mail service
+            </p>
+
+            <p>
+                <br> images! sections
+                unsplash, similar to shutter stock for free images
+                use descriptive names for images for search images to better index pages
+                alt tag - shows when the image cant be loaded, also used for people that use screen readers
+                sizing images - using css
+                can define height and width - which may distort the image
+                object-fit fixes the squish - cover - covers the entire box defined by height and width
+                others include, fill inherit, initial ... most of the time is using cover
+            </p>
+
+        <h2>CSS Notes </h2>
+            <p>
+                <br>can go between style tags, or in a separate folder
+                inside the braces of a css declaration of attributes
+                - learn the box model
+                every html is a box, with height and width
+                padding around the box to squeeze the content, border around it, then additonal invisible space called a margin
+                - use firefox for dev tools its better you can edit box model directly!
+
+                layout - positioning of elements relative to each other
+                - use flex box a modern box - justify content - horizontal
+                - grid ! - differnt from flexbox - grid is the big picture layout
+                <br> .grid {
+                <br> display:grid;
+                <br> grid-template-columns: define the width with values spaced for each column;
+                <br> grid-template-rows: define the heigh of rows with values spaced for each row;
+                <br> place-items: center; places items in the center
+                <br> }
+
+                responsive layouts - change based on viewport size
+                <br> article {width: clamp(200px, 50%, 600px} minimum of 200 px max of 600
+                maintain aspect ratio property
+
+                class attribute, classification, puts it inside another category that can have other attributes
+                .classification - all elements with this name , p.classification - only p tag with this classification
+
+                <br>example css attributes:
+                border-radius -> round the corners of an image,  (half of the width makes a circle)
+                float left pushes it to the left
+                margin - right adds margin to the right
+                fontstyle -
+            </p>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Style sheet included -- at /content/style.css -->
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'Content/style.css' %}"}>
+<html lang = "en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber News Today</title>
+</head>
+
+<nav>
+     <ul>
+        <li><a href="/Home/Home/">Home</a></li>
+        <li><a href="/Content/cybernews">Cyber Landscape News</a></li>
+        <li><a href="">CS Major Courses</a></li>
+        <li><a href="">CY Major Courses</a></li>
+    </ul>
+</nav>
+
+<body>
+{% block title %}
+<h1>Cyber Landscape News</h1>
+{% endblock %}
+    <container>
+        <div class="row">
+            <div class="column rounded">
+                <h2>Cybernews.com News and Security Articles</h2>
+                {% for list_item in cyber_news_info %}
+                <a href={{ list_item.0 }}>{{ list_item.1 }}</a><br><br>
+                {% endfor %}
+            </div>
+            <div class="column rounded">
+                <h2>Hackernews.com Articles</h2>
+                {% for list_item in hacker_news_info %}
+                <a href={{ list_item.0 }}>{{ list_item.1 }}</a><br><br>
+                {% endfor %}
+            </div>
+            <div class="column rounded">
+                <h2>Threatpost.com Vulnerabilities</h2>
+                {% for list_item in threat_post_info %}
+                        <a href={{ list_item.0 }}>{{ list_item.1 }}</a><br><br>
+                {% endfor %}
+            </div>
+        </div>
+    </container>
+</body>
+</html>
