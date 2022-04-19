@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'Content/style.css' %}"}>
+
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %} Base HTML {% endblock %} </title>
+    </head>
+    <!--Navigation Bar-->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/CyberNews/">Cyber Landscape News</a></li>
+            <li><a href="/Accounts/login">Login</a></li>
+            <li><a href="">Extra Button 4</a></li>
+        </ul>
+    </nav>
+    <!-- Body Content -->
+    <body>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+    </body>
+</html>

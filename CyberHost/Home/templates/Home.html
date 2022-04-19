@@ -1,23 +1,10 @@
 <!DOCTYPE html>
 
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'Content/style.css' %}"}>
-<html lang = "en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber News Home Page</title>
-</head>
-    <body>
-        <nav>
-            <ul>
-                <li><a href="/Home/Home">Home</a></li>
-                <li><a href="/Content/cybernews">Cyber Landscape News</a></li>
-                <li><a href="">CS Major Courses</a></li>
-                <li><a href="">CY Major Courses</a></li>
-            </ul>
-        </nav>
+{% extends 'base.html' %}
 
+{% block title %}Cyber News Home Page{% endblock %}
+
+{% block content %}
         <h1>HTML and CSS Notes</h1>
         <h2>Welome to my Django Project!</h2>
             <p>
@@ -119,5 +106,4 @@
                 margin - right adds margin to the right
                 fontstyle -
             </p>
-    </body>
-</html>
+{% endblock %}

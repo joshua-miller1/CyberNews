@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from bs4 import BeautifulSoup
+from .models import ThreatPostLinks
 import requests
 
 # Create your views here.

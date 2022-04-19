@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'Content/style.css' %}"}>
+<html lang = "en">
+
+<nav>
+     <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/CyberNews/">Cyber Landscape News</a></li>
+        <li><a href="">CS Major Courses</a></li>
+        <li><a href="">CY Major Courses</a></li>
+    </ul>
+</nav>
+
+<h2>Log In</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Log In</button>
+</form>
+
+</html>
