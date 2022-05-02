@@ -27,24 +27,25 @@ for each2 in tp_articles_s2:
     # print(x[1]) # alt text
 """
 
-""""
+
 hackerNews = requests.get('https://thehackernews.com/').text
 soup_hackerNews = BeautifulSoup(hackerNews, 'lxml')
 stories = soup_hackerNews.find_all('a', class_="story-link")
-print(stories)
-
 print()
-print()
-print()
-
 
 hackerNews_urls = []
 for tag in stories:
     print(tag.get('href'))
     print(tag.h2.text)
+    date = tag.find('div', {'class': 'item-label'}).text
+    i = tag.find('span').text
+    newDate = date.replace(i, '')
+    print(newDate)
+    del date
+
+
+
 """
-
-
 cyberNews = requests.get('https://cybernews.com/').text
 soup = BeautifulSoup(cyberNews, 'lxml')
 articles = soup.find_all('article')
@@ -56,7 +57,7 @@ for links in articles:
     # print(links.a['href'])
     if "https://cybernews.com/news" in links.a['href']:
         # print(links.a['href'])
-        temp_tuple = links.a['href'], links.h3.text
+        temp_tuple = links.a['href'], links.h3.text, links.span.text #links.span.text = grabs the date 
         cyber_news_links.append(temp_tuple)
         # print('news')
     elif "https://cybernews.com/security" in links.a['href']:
@@ -67,5 +68,6 @@ for links in articles:
 
 for x in cyber_news_links:
     print(x)
+"""
 
 # EOF

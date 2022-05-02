@@ -3,28 +3,33 @@
 {% block title %}Cyber News Today{% endblock %}
 
 {% block content %}
-<body>
-    <container>
-        <h1>Cyber News Landscape</h1>
-        <div class="row">
-            <div class="column rounded">
-                <h2>Cybernews.com News and Security Articles</h2>
-                {% for list_item in cyber_news_info %}
-                <a href={{ list_item.0 }}>{{ list_item.1 }}</a><br><br>
-                {% endfor %}
+{% if user.is_authenticated %}
+    <body>
+        <container>
+            <h1>Cyber News Landscape</h1>
+            <div class="row">
+                <div class="column rounded">
+                    <h2>Cybernews.com News and Security Articles</h2>
+                    {% for list_item in cyber_news_info %}
+                    <a href={{ list_item.0 }}>{{ list_item.1 }}</a><br><br>
+                    {% endfor %}
+                </div>
+                <div class="column rounded">
+                    <h2>Hackernews.com Articles</h2>
+                    {% for list_item in hacker_news_info %}
+                    <a href={{ list_item.0 }}>{{ list_item.1 }}</a><br><br>
+                    {% endfor %}
+                </div>
+                <div class="column rounded">
+                    <h2>Threatpost.com Vulnerabilities</h2>
+                    {% for list_item in threat_post_info %}
+                            <a href={{ list_item.0 }}>{{ list_item.1 }}</a><br><br>
+                    {% endfor %}
+                </div>
             </div>
-            <div class="column rounded">
-                <h2>Hackernews.com Articles</h2>
-                {% for list_item in hacker_news_info %}
-                <a href={{ list_item.0 }}>{{ list_item.1 }}</a><br><br>
-                {% endfor %}
-            </div>
-            <div class="column rounded">
-                <h2>Threatpost.com Vulnerabilities</h2>
-                {% for list_item in threat_post_info %}
-                        <a href={{ list_item.0 }}>{{ list_item.1 }}</a><br><br>
-                {% endfor %}
-            </div>
-        </div>
-    </container>
+        </container>
+    </body>
+    {% else %}
+    <h1>You must be logged in to view the content aggregator!</h1>
+{% endif %}
 {% endblock %}

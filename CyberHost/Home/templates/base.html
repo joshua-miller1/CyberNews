@@ -13,8 +13,12 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/CyberNews/">Cyber Landscape News</a></li>
+            {% if user.is_authenticated%}
+            <li><a href="/Accounts/login">Welcome {{user.username}}!</a></li>
+            {% else %}
             <li><a href="/Accounts/login">Login</a></li>
-            <li><a href="">Extra Button 4</a></li>
+            {% endif %}
+            <li><a href="{% url 'logout' %}">Logout</a></li>
         </ul>
     </nav>
     <!-- Body Content -->

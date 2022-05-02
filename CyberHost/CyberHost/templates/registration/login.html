@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'Content/style.css' %}"}>
-<html lang = "en">
-
-<nav>
-     <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/CyberNews/">Cyber Landscape News</a></li>
-        <li><a href="">CS Major Courses</a></li>
-        <li><a href="">CY Major Courses</a></li>
-    </ul>
-</nav>
-
-<h2>Log In</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Log In</button>
-</form>
-
-</html>
+{% extends 'base.html' %}
+{% block title %}Cyber News Login{% endblock %}
+{% block content %}
+    <container id="login">
+        <h2>Sign in</h2>
+        <p id="login_p">Use your Cyber Landscape Account</p>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="login" type="submit">Log In</button>
+        </form>
+        <br>
+        <h2>Create a New Account</h2>
+            <button type="submit" onclick="location.href='/signup'">Create an new Account</button>
+            <button type="submit" onclick="location.href='/Accounts/password_reset'">Password Reset</button>
+    </container>
+{% endblock %}

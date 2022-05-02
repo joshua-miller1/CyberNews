@@ -78,6 +78,32 @@
         width: 100%
     }
 
+    content {
+        text-align: center;
+    }
+
+    #login {
+        display: table;
+        margin: 15vh auto;
+        box-shadow: 5px 5px;
+        background-color: #ebebeb;
+        border: 2px solid black;
+        padding: 30px;
+        border-radius: 30px;
+    }
+
+    #login_p{
+        text-align: center;
+    }
+
+    button.login {
+        display: table;
+        margin: auto;
+    }
+
+    button {
+    }
+
 @media only screen and (max-width: 950px) {
     .column {
         width: 100%
